@@ -2,20 +2,67 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Atividade 1</title>
+    <title>Atividades de Programação</title>
 </head>
 <body>
-    <h1>Programa Olá Você!</h1>
-    <form>
-        <p>Nome:
-            <input type="text" id="inNome">
-            <input type="submit" value="Enviar">
-        </p>
-    </form>
-    <h3></h3>
+    <header>
+        <h1>Atividades de Programação - 3º Trimestre</h1>
+    </header>
+
+    <main>
+        <!-- Atividade 1 -->
+        <section class="atividade" id="atividade1">
+            <h2>Atividade 1: Programa Olá Você!</h2>
+            <form class="form-atividade">
+                <p>Nome:
+                    <input type="text" id="inNome" placeholder="Digite seu nome">
+                    <input type="submit" value="Enviar">
+                </p>
+            </form>
+            <h3 id="resp1"></h3>
+        </section>
+
+        <!-- Atividade 2 -->
+        <section class="atividade" id="atividade2">
+            <h2>Atividade 2: Cine Barão</h2>
+            <form class="form-atividade">
+                <p>Título do Filme:
+                    <input type="text" id="inTitulo" required placeholder="Nome do filme">
+                </p>
+                <p>Duração (min):
+                    <input type="number" id="inDuracao" required placeholder="Duração em minutos">
+                </p>
+                <input type="submit" value="Converter em Horas e Minutos">
+            </form>
+            <h3 id="resp2a"></h3>
+            <h4 id="resp2b"></h4>
+        </section>
+
+        <!-- Atividade 3 -->
+        <section class="atividade" id="atividade3">
+            <h2>Atividade 3: Revenda de Veículos</h2>
+            <form class="form-atividade">
+                <p>Veículo:
+                    <input type="text" id="inVeiculo" required placeholder="Modelo do veículo">
+                </p>
+                <p>Preço R$:
+                    <input type="number" id="inPreco" required placeholder="Preço do veículo">
+                </p>
+                <input type="submit" value="Ver Promoção">
+            </form>
+            <h3 id="resp3a"></h3>
+            <h3 id="resp3b"></h3>
+            <h3 id="resp3c"></h3>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Programação Web</p>
+    </footer>
+
     <script src="main.js"></script>
 </body>
 </html>
