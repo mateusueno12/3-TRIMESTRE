@@ -1,45 +1,62 @@
-// Atividade 1 - Programa Olá Você!
-const form1 = document.querySelector('#atividade1 form');
-const resp1 = document.querySelector('#resp1');
+// Atividade 1
+const form1 = document.querySelector("#form1");
+const inNome = document.querySelector("#inNome");
+const saida1 = document.querySelector("#saida1");
 
-form1.addEventListener('submit', (e) => {
-    const nome = document.querySelector('#inNome').value;
-    resp1.innerText = `Olá, ${nome}!`;
-    e.preventDefault();
+form1.addEventListener("submit", (e) => {
+  e.preventDefault();
+  saida1.innerText = `Olá, ${inNome.value}! Seja bem-vindo(a)!`;
 });
 
-// Atividade 2 - Cine Barão
-const form2 = document.querySelector('#atividade2 form');
-const resp2a = document.querySelector('#resp2a');
-const resp2b = document.querySelector('#resp2b');
+// Atividade 2
+const form2 = document.querySelector("#form2");
+const inNome2 = document.querySelector("#inNome2");
 
-form2.addEventListener('submit', (e) => {
-    const titulo = document.querySelector('#inTitulo').value;
-    const duracao = Number(document.querySelector('#inDuracao').value);
-
-    const horas = Math.floor(duracao / 60);
-    const minutos = duracao % 60;
-
-    resp2a.innerText = titulo;
-    resp2b.innerText = `${horas} hora(s) e ${minutos} minuto(s)`;
-    e.preventDefault();
+form2.addEventListener("submit", (e) => {
+  e.preventDefault();
+  alert(`Você digitou: ${inNome2.value}`);
 });
 
-// Atividade 3 - Revenda de Veículos
-const form3 = document.querySelector('#atividade3 form');
-const resp3a = document.querySelector('#resp3a');
-const resp3b = document.querySelector('#resp3b');
-const resp3c = document.querySelector('#resp3c');
+// Atividade 3
+const form3 = document.querySelector("#form3");
+const inModelo = document.querySelector("#inModelo");
+const inValor = document.querySelector("#inValor");
+const saida3 = document.querySelector("#saida3");
 
-form3.addEventListener('submit', (e) => {
-    const veiculo = document.querySelector('#inVeiculo').value;
-    const preco = Number(document.querySelector('#inPreco').value);
+form3.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-    const entrada = preco * 0.50;
-    const parcela = entrada / 12;
+  const modelo = inModelo.value;
+  const valor = Number(inValor.value);
 
-    resp3a.innerText = `Promoção: ${veiculo}`;
-    resp3b.innerText = `Entrada de R$: ${entrada.toFixed(2)}`;
-    resp3c.innerText = `+12x de R$ ${parcela.toFixed(2)}`;
-    e.preventDefault();
+  if (!modelo || valor <= 0) {
+    alert("Preencha os campos corretamente!");
+    return;
+  }
+
+  const entrada = valor * 0.5;
+  const parcela = (valor - entrada) / 12;
+
+  saida3.innerText = `Modelo: ${modelo}\nEntrada: R$ ${entrada.toFixed(2)}\n12x de R$ ${parcela.toFixed(2)}`;
+});
+
+// Atividade 4
+const form4 = document.querySelector("#form4");
+const inPreco = document.querySelector("#inPreco");
+const inPeso = document.querySelector("#inPeso");
+const saida4 = document.querySelector("#saida4");
+
+form4.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const precoKg = Number(inPreco.value);
+  const peso = Number(inPeso.value);
+
+  if (precoKg <= 0 || peso <= 0) {
+    alert("Valores inválidos!");
+    return;
+  }
+
+  const valor = (precoKg / 1000) * peso;
+  saida4.innerText = `Valor a pagar: R$ ${valor.toFixed(2)}`;
 });
