@@ -1,68 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Atividades de Programação</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividades 1 a 4</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Atividades de Programação - 3º Trimestre</h1>
-    </header>
+  <h1>Atividades de Programação</h1>
 
-    <main>
-        <!-- Atividade 1 -->
-        <section class="atividade" id="atividade1">
-            <h2>Atividade 1: Programa Olá Você!</h2>
-            <form class="form-atividade">
-                <p>Nome:
-                    <input type="text" id="inNome" placeholder="Digite seu nome">
-                    <input type="submit" value="Enviar">
-                </p>
-            </form>
-            <h3 id="resp1"></h3>
-        </section>
+  <!-- Atividade 1 -->
+  <section>
+    <h2>Atividade 1 - Formulário de Nome</h2>
+    <form id="form1">
+      <p>Digite seu nome:</p>
+      <input type="text" id="inNome">
+      <input type="submit" value="Enviar">
+    </form>
+    <h3 id="saida1"></h3>
+  </section>
 
-        <!-- Atividade 2 -->
-        <section class="atividade" id="atividade2">
-            <h2>Atividade 2: Cine Barão</h2>
-            <form class="form-atividade">
-                <p>Título do Filme:
-                    <input type="text" id="inTitulo" required placeholder="Nome do filme">
-                </p>
-                <p>Duração (min):
-                    <input type="number" id="inDuracao" required placeholder="Duração em minutos">
-                </p>
-                <input type="submit" value="Converter em Horas e Minutos">
-            </form>
-            <h3 id="resp2a"></h3>
-            <h4 id="resp2b"></h4>
-        </section>
+  <!-- Atividade 2 -->
+  <section>
+    <h2>Atividade 2 - Alerta com Nome</h2>
+    <form id="form2">
+      <p>Digite seu nome:</p>
+      <input type="text" id="inNome2">
+      <input type="submit" value="Mostrar Alerta">
+    </form>
+  </section>
 
-        <!-- Atividade 3 -->
-        <section class="atividade" id="atividade3">
-            <h2>Atividade 3: Revenda de Veículos</h2>
-            <form class="form-atividade">
-                <p>Veículo:
-                    <input type="text" id="inVeiculo" required placeholder="Modelo do veículo">
-                </p>
-                <p>Preço R$:
-                    <input type="number" id="inPreco" required placeholder="Preço do veículo">
-                </p>
-                <input type="submit" value="Ver Promoção">
-            </form>
-            <h3 id="resp3a"></h3>
-            <h3 id="resp3b"></h3>
-            <h3 id="resp3c"></h3>
-        </section>
-    </main>
+  <!-- Atividade 3 -->
+  <section>
+    <h2>Atividade 3 - Revenda de Carros</h2>
+    <form id="form3">
+      <p>Modelo do carro:</p>
+      <input type="text" id="inModelo">
+      <p>Valor do carro (R$):</p>
+      <input type="number" id="inValor">
+      <input type="submit" value="Calcular">
+    </form>
+    <h3 id="saida3"></h3>
+  </section>
 
-    <footer>
-        <p>© 2023 Programação Web</p>
-    </footer>
+  <!-- Atividade 4 -->
+  <section>
+    <h2>Atividade 4 - Buffet por Quilo</h2>
+    <form id="form4">
+      <p>Preço por Kg (R$):</p>
+      <input type="number" id="inPreco" step="0.01">
+      <p>Peso do prato (gramas):</p>
+      <input type="number" id="inPeso">
+      <input type="submit" value="Calcular">
+    </form>
+    <h3 id="saida4"></h3>
+  </section>
 
-    <script src="main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
