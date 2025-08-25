@@ -60,3 +60,30 @@ form4.addEventListener("submit", (e) => {
   const valor = (precoKg / 1000) * peso;
   saida4.innerText = `Valor a pagar: R$ ${valor.toFixed(2)}`;
 });
+
+// Atividade 5
+const form5 = document.querySelector("#form5");
+const inMedicamento = document.querySelector("#inMedicamento");
+const inPrecoMed = document.querySelector("#inPrecoMed");
+const outMedicamento = document.querySelector("#outMedicamento");
+const outPromocao = document.querySelector("#outPromocao");
+
+form5.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const medicamento = inMedicamento.value;
+  const preco = Number(inPrecoMed.value);
+
+  if (!medicamento || preco <= 0) {
+    alert("Preencha os campos corretamente!");
+    return;
+  }
+
+  // Calcular promoção: desconto dos centavos na compra de 2 unidades
+  const total = preco * 2;
+  const inteiro = Math.floor(total);
+  const valorPromocao = inteiro; // Desconto dos centavos
+
+  outMedicamento.innerText = `Promoção de ${medicamento}`;
+  outPromocao.innerText = `Leve 2 por apenas R$ ${valorPromocao.toFixed(2)}`;
+});
